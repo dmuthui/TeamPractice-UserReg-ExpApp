@@ -1,0 +1,28 @@
+<div class="col-8">
+    <table class="my-3 table table-success table-striped table-hover table-bordered border-primary">
+        <thead class="table-dark">
+          <legend> <strong><em>REGISTERED USERS</em> </strong></legend>
+          <tr>
+            <th scope="col">NAMES</th>
+            <th scope="col">GENDER</th>
+            <th scope="col">CONTACT</th>
+            <th scope="col">RESIDENCE</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">PASSWORD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% userList.forEach((user) => { %>
+            <tr>
+                <td> <%= user.names %>  </td>
+                <td> <%= user.gender %> </td>
+                <td> <%= user.contact %> </td>
+                <td> <%= user.residence %> </td>
+                <td> <%= user.email %> </td>
+                <td> <%= user.password %> </td>
+            </tr>
+        <%})%>
+        </tbody>
+        </table>
+        <div class='text-end'> <small> <%= userList.length %> Users </small> </div>
+</div>
