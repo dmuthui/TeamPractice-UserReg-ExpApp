@@ -13,6 +13,7 @@ router.post('/', (req,res)=>{
     const createdUser = new Users (req.body)
     createdUser.save()
     res.redirect('/')
+    //res.send("New user has been added!");
 })
 
 module.exports = router;
